@@ -7,9 +7,25 @@
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <div class="card" role="main">
+    <h1>Running Text — "We love Programming!"</h1>
+
+    <div class="controls" aria-hidden="false">
+      <label for="speed">
+        Speed (1–10):
+        <input id="speed" type="range" min="1" max="10" value="5" aria-label="speed slider">
+      </label>
+
+      <div class="value-bubble" id="speedValue">5</div>
+
+      <div class="controls-right">
+        <button id="restartBtn" class="btn" title="Restart animation">Restart</button>
+      </div>
+    </div>
+
+    <div id="text" aria-live="polite" aria-atomic="true"></div>
+    <div class="muted">Per-character delay = <span id="delayMs"></span> ms (500 / speed)</div>
+  </div>
 
 </body>
 
